@@ -11,13 +11,19 @@
     /* --main-background: #E3C68C; */
     /* --primary: #1992D4; */
     --primary: #1D4742;
+    --accent: #d4af37;
     font-family: 'Roboto', sans-serif;
-}   
+} 
+
+body {
+    height: 100vh;
+}
 
 .main-grid {
     display: grid;
     grid-template-rows: 1fr 4fr;
     grid-template-columns: minmax(300px, 1.5fr) 5fr;
+    height: 100vh;
 }
 
 .main-header {
@@ -69,8 +75,6 @@
     grid-row: span 3;
     height: 80px;
     width: 80px;
-    /* position: relative;
-    left: 25%; */
  }
 
 .profile-img {
@@ -120,12 +124,6 @@
     display: flex;
 }
 
-/* .link-icon {
-    width: 25px;
-    height: 25px;
-    /* src: url(./assets/ab-testing.svg);
-} */
-
 .sidebar-heading {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -145,22 +143,28 @@
     list-style: none;
     display: grid;
     grid-auto-rows: 50px;
-    /* grid-template-columns: 100%; */
 }
 
 .main-section {
     background-color: var(--main-background);
     display: grid;
     grid-template-columns: 3fr minmax(300px, 1.5fr);
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 55%;
     gap: 20px;
-    padding: 15px;
+    padding: 24px;
+}
+
+.section-heading {
+    font-size: 20px;
+    margin-bottom: 10px;;
 }
 
 .project-grid {
     display: grid;
-    gap: 20px;
+    gap: 24px;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* grid-template-rows: repeat(auto-fill, max(400px, 1fr)); */
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 .projects {
@@ -170,7 +174,44 @@
 .card {
     background-color: white;
     border-radius: 6px;
-    padding: 12px;
+    padding: 18px 12px;
+    border-left: 8px solid var(--accent);
+    display: grid;
+    grid-template-rows: 1fr 2fr 40px;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+
+.card-actions img {
+    height: 32px;
+    width: 32px;
+}
+
+.announcement-container {
+    background-color: white;
+    border-radius: 6px;
+    padding: 24px 32px;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.announcement-container h2 {
+    font-size: 18px;
+}
+
+.announcement:not(:first-child) {
+    border-top: 1px gray solid;
+    padding-top: 14px;
+}
+
+.announcement:not(:last-child) {
+    padding-bottom: 14px;
 }
 
 .trending {
