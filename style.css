@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,9 +7,11 @@
 }
 
 :root {
-    --main-background: #E2E8F0;;
-    --primary: #1992D4;
-    /* height: 100vh; */
+    --main-background: #E2E8F0;
+    /* --main-background: #E3C68C; */
+    /* --primary: #1992D4; */
+    --primary: #1D4742;
+    font-family: 'Roboto', sans-serif;
 }   
 
 .main-grid {
@@ -24,7 +28,13 @@
     display: grid;
     grid-template-columns: 60% 40%;
     grid-template-rows: 1fr 1fr;
-    padding: 28px 40px;
+    padding: 0 40px 28px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .search-bar {
@@ -39,22 +49,48 @@
 .account {
     display: flex;
     justify-content: end;
+    align-items: center;
     gap: 24px;
+}
+
+.account img {
+    height: 50px;
+    width: 50px;
 }
 
 .user-profile {
     display: grid;
     grid-template-rows: 50% 50%;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: auto 5fr;
+    column-gap: 16px;
 }
 
 .user-profile > img {
     grid-row: span 3;
+    height: 80px;
+    width: 80px;
+    /* position: relative;
+    left: 25%; */
+ }
+
+.profile-img {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.welcome {
+    display: flex;
+    align-items: center;
+}
+
+.name-and-username {
+    font-size: 24px;
 }
 
 .user-actions {
     display: flex;
     justify-content: end;
+    align-items: center;
     gap: 32px;
 }
 
@@ -80,10 +116,25 @@
     grid-template-rows: 1fr 4fr 4fr;
 }
 
+.page-link {
+    display: flex;
+}
+
+/* .link-icon {
+    width: 25px;
+    height: 25px;
+    /* src: url(./assets/ab-testing.svg);
+} */
+
 .sidebar-heading {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 12px;
+}
+
+.sidebar img {
+    height: 50px;
+    width: auto;
 }
 
 .dashboard-heading {
@@ -119,6 +170,7 @@
 .card {
     background-color: white;
     border-radius: 6px;
+    padding: 12px;
 }
 
 .trending {
